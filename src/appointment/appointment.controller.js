@@ -9,7 +9,7 @@ export const getAppointments = async (req, res) => {
 
     const [total, appointments] = await Promise.all([
       Appointment.countDocuments(query),
-      Appointment.find(query).skip(Number(desde)).limit(Numbrer(limite)),
+      Appointment.find(query).skip(Number(desde)).limit(Number(limite)),
     ])
 
     return res.status(200).json({
