@@ -1,11 +1,11 @@
-import { body } from "express-validator";
-import { validarCampos } from "./validate-fields.js";
-import { handleErrors } from "./handle-errors.js";
+import { body } from "express-validator"
+import { validarCampos } from "./validate-fields.js"
+import { handleErrors } from "./handle-errors.js"
 
 export const createAppointmentValidator = [
-    body("date").notEmpty().withMessage("La fecha es requerida"),
-    body("pet").notEmpty().withMessage("La mascota es requerida"),
-    body("pet").isMongoId().withMessage("No es un ID válido de MongoDB"),
-    validarCampos,
-    handleErrors
-];
+  body("date").notEmpty().withMessage("Date is required."),
+  body("pet").notEmpty().withMessage("Mascot is required."),
+  body("pet").isMongoId().withMessage("Not a valid MongoDB ID."),
+  validarCampos,
+  handleErrors,
+]

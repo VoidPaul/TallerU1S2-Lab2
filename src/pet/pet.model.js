@@ -1,35 +1,38 @@
-import { Schema, model } from "mongoose";
+import { Schema, model } from "mongoose"
 
-const petSchema = new Schema({
+const petSchema = new Schema(
+  {
     name: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     description: {
-        type: String,
-        required: true
+      type: String,
+      required: true,
     },
     age: {
-        type: Number,
-        required: true
+      type: Number,
+      required: true,
     },
     type: {
-        type: String,
-        uppercase: true,
-        required: true
+      type: String,
+      uppercase: true,
+      required: true,
     },
     keeper: {
-        type: Schema.Types.ObjectId,
-        ref: 'user',
-        required: true
+      type: Schema.Types.ObjectId,
+      ref: "user",
+      required: true,
     },
     status: {
-        type: Boolean,
-        default: true
+      type: Boolean,
+      default: true,
     },
-}, {
+  },
+  {
     timestamps: true,
-    versionKey: false
-});
+    versionKey: false,
+  }
+)
 
-export default model('Pet', petSchema);
+export default model("Pet", petSchema)

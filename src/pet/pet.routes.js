@@ -1,17 +1,22 @@
-import { Router } from "express";
-import { savePet, getPets, searchPet, deletePet } from "./pet.controller.js";
-import { createPetValidator, getPetByIdValidator, updatePetValidator, deletePetValidator } from "../middlewares/pet-validators.js";
+import { Router } from "express"
+import { savePet, getPets, searchPet, deletePet } from "./pet.controller.js"
+import {
+  createPetValidator,
+  getPetByIdValidator,
+  updatePetValidator,
+  deletePetValidator,
+} from "../middlewares/pet-validators.js"
 
-const router = Router();
+const router = Router()
 
-router.post("/addPet", createPetValidator, savePet);
+router.post("/addPet", createPetValidator, savePet)
 
-router.get("/findPet/:id", getPetByIdValidator, searchPet);
+router.get("/findPet/:id", getPetByIdValidator, searchPet)
 
-router.get("/", getPets);
+router.get("/", getPets)
 
-router.put("/updatePet/:id", updatePetValidator, savePet);
+router.put("/updatePet/:id", updatePetValidator, savePet)
 
-router.delete("/deletePet/:id", deletePetValidator, deletePet);
+router.delete("/deletePet/:id", deletePetValidator, deletePet)
 
-export default router;
+export default router

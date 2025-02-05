@@ -5,11 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "dev": "node --watch index.js"
+    "dev": "nodemon index.js"
   },
   "keywords": [],
-  "author": "Braulio Echeverria",
-  "license": "ISC",
+  "author": "Braulio Echcheverria",
+  "license": "MIT",
   "type": "module",
   "description": "API para gestion de sistema de adopción de mascotas",
   "dependencies": {
@@ -27,5 +27,8 @@
     "mongoose": "^8.9.5",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
   }
 }
